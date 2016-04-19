@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="OPRSDB" Class="PropietarioDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.\SQLEXPRESS;Initial Catalog=OPRSDB;Integrated Security=True;Pooling=False" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="OPRSDBConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.PROPIETARIO" Member="PROPIETARIO">
+    <Type Name="PROPIETARIO">
+      <Column Name="ID" Type="System.Decimal" DbType="Decimal(38,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NOMBRE" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="APELLIDO" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Column Name="CEDULA" Type="System.Decimal" DbType="Decimal(38,0)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

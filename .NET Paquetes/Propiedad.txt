@@ -1,0 +1,11 @@
+CREATE TABLE [dbo].[PROPIEDAD] (
+    [ID]          NUMERIC (38) NOT NULL,
+    [Propietario] NCHAR (30)   NOT NULL,
+    [DIRECCION]   NCHAR (50)   NOT NULL,
+    [Renta]       NUMERIC (30) NOT NULL,
+    [Localidad]   NCHAR (20)   NOT NULL,
+    [Tipo]        NVARCHAR(50) NOT NULL,
+    [NCuartos]    INT          NOT NULL,
+    PRIMARY KEY CLUSTERED ([ID] ASC)
+);
+

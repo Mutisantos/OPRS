@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://Web_Service/" targetNamespace="http://Web_Service/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="count" type="tns:count" />
+  <xs:element name="countResponse" type="tns:countResponse" />
+  <xs:element name="create" type="tns:create" />
+  <xs:element name="edit" type="tns:edit" />
+  <xs:element name="find" type="tns:find" />
+  <xs:element name="findAll" type="tns:findAll" />
+  <xs:element name="findAllResponse" type="tns:findAllResponse" />
+  <xs:element name="findRange" type="tns:findRange" />
+  <xs:element name="findRangeResponse" type="tns:findRangeResponse" />
+  <xs:element name="findResponse" type="tns:findResponse" />
+  <xs:element name="propiedadfinanciera" type="tns:propiedadfinanciera" />
+  <xs:element name="remove" type="tns:remove" />
+  <xs:element name="validar" type="tns:validar" />
+  <xs:element name="validarResponse" type="tns:validarResponse" />
+  <xs:complexType name="findAll">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="findAllResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:propiedadfinanciera" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="propiedadfinanciera">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="direccion" type="xs:string" />
+      <xs:element minOccurs="0" name="idpropiedad" type="xs:decimal" />
+      <xs:element minOccurs="0" name="localidad" type="xs:string" />
+      <xs:element minOccurs="0" name="ncuartos" type="xs:string" />
+      <xs:element minOccurs="0" name="renta" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="count">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="countResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="remove">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="entity" type="tns:propiedadfinanciera" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findRange">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="range" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findRangeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:propiedadfinanciera" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="find">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:propiedadfinanciera" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="create">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="entity" type="tns:propiedadfinanciera" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="validar">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+      <xs:element minOccurs="0" name="arg1" type="xs:string" />
+      <xs:element name="arg2" type="xs:int" />
+      <xs:element name="arg3" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="validarResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="edit">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="entity" type="tns:propiedadfinanciera" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

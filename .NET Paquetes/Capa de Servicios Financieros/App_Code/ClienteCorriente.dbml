@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BDFinanciera" Class="ClienteCorrienteDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.\SQLEXPRESS;Initial Catalog=BDFinanciera;Integrated Security=True;Pooling=False" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="BDFinancieraConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ClienteCorriente" Member="ClienteCorriente">
+    <Type Name="ClienteCorriente">
+      <Column Name="numeroTarjeta" Type="System.String" DbType="NVarChar(16) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tipoTarjeta" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="nombreUsuario" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="mesExpiracion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="anoExpiracion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="cupo" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

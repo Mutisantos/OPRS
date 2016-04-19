@@ -1,0 +1,12 @@
+CREATE TABLE [dbo].[ClienteCorriente] (
+    [numeroTarjeta] NVARCHAR (16) NOT NULL,
+    [tipoTarjeta]   NVARCHAR (50) NOT NULL,
+    [nombreUsuario] NVARCHAR (50) NOT NULL,
+    [mesExpiracion] INT           NOT NULL,
+    [anoExpiracion] INT           NOT NULL,
+    [email]         NVARCHAR (50) NOT NULL,
+    [cupo] REAL NOT NULL DEFAULT 1000000, 
+    PRIMARY KEY CLUSTERED ([numeroTarjeta] ASC),
+    CONSTRAINT [mesExpiracion] CHECK ([mesExpiracion]>=(1) AND [mesExpiracion]<=(12)),
+    CONSTRAINT [tipoTarjeta] CHECK ([tipoTarjeta]='MASTERCARD' OR [tipoTarjeta]='VISA')
+);
